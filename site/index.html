@@ -118,7 +118,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);font-si
   <p class="sub">A quick view of where I am, what I’m working on, and where I’m heading.</p>
   <div class="cards">
     <div class="card"><h3>Building</h3><p>Hands-on AWS projects, written as Terraform code and stored in Git. Current project: a private S3 + CloudFront website with Origin Access Control and HTTPS.</p></div>
-    <div class="card"><h3>Learning next</h3><ul><li>CI/CD with GitHub Actions and OIDC</li><li>VPC networking and multi-tier design</li><li>Lambda and API Gateway</li></ul></div>
+    <div class="card"><h3>Learning next</h3><ul><li>Automated deploys (CD) from GitHub Actions</li><li>VPC networking and multi-tier design</li><li>Lambda and API Gateway</li></ul></div>
     <div class="card"><h3>Goal</h3><p>Join a team where I can work on real AWS infrastructure, learn from senior engineers, and grow toward cloud architecture.</p></div>
   </div>
 </div></section>
@@ -129,7 +129,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);font-si
   <div class="sk"><h3>AWS</h3><small>Cloud services</small>
     <div class="tags"><span class="hot">S3</span><span class="hot">CloudFront</span><span class="hot">IAM</span><span class="hot">Bucket policies</span><span class="learn">EC2</span><span class="learn">VPC</span><span class="learn">RDS</span><span class="learn">Lambda</span><span class="learn">Route 53</span><span class="learn">CloudWatch</span></div></div>
   <div class="sk"><h3>Infrastructure as Code and DevOps</h3><small>Automation and version control</small>
-    <div class="tags"><span class="hot">Terraform</span><span class="hot">Git and GitHub</span><span class="hot">AWS CLI</span><span class="hot">Linux (WSL)</span><span class="learn">GitHub Actions</span><span class="learn">OIDC</span></div></div>
+    <div class="tags"><span class="hot">Terraform</span><span class="hot">Git and GitHub</span><span class="hot">AWS CLI</span><span class="hot">Linux (WSL)</span><span class="hot">GitHub Actions</span></div></div>
   <div class="sk"><h3>Architecture principles</h3><small>From the Well-Architected Framework</small>
     <div class="tags"><span class="hot">Least privilege</span><span class="hot">Security</span><span class="hot">Cost optimization</span><span class="learn">High availability</span><span class="learn">Fault tolerance</span></div></div>
   <div class="sk"><h3>Professional</h3><small>From 5 years of operations work</small>
@@ -154,11 +154,11 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);font-si
   <div class="proj">
     <h3>Portfolio site deployed with Terraform on AWS</h3>
     <p>A static site served from a private S3 bucket through CloudFront. The whole setup is code, so one command builds it and one command removes it.</p>
-    <div class="flow"><span>Git push</span><em>→</em><span class="wip">GitHub Actions (in progress)</span><em>→</em><span>Terraform</span><em>→</em><span>S3 (private)</span><em>→</em><span>CloudFront + HTTPS</span></div>
+    <div class="flow"><span>Git push</span><em>→</em><span>GitHub Actions: validate</span><em>→</em><span>terraform apply (from my laptop)</span><em>→</em><span>S3 (private)</span><em>→</em><span>CloudFront + HTTPS</span></div>
     <div class="tags"><span class="hot">Terraform</span><span class="hot">S3</span><span class="hot">CloudFront</span><span class="hot">OAC</span><span class="hot">IAM</span><span class="hot">Git</span></div>
     <div class="cols">
       <div><h4>What I built</h4><ul><li>Private bucket with Block Public Access on</li><li>CloudFront with Origin Access Control</li><li>Bucket policy limited to one distribution</li></ul></div>
-      <div><h4>Problems I solved</h4><ul><li>AccessDenied: fixed root object and OAC setup</li><li>Page shown as text: set the correct Content-Type</li><li>Stale pages: cache policy and invalidation</li></ul></div>
+      <div><h4>Problems I solved</h4><ul><li>AccessDenied: fixed root object and OAC setup</li><li>Page shown as text: set the correct Content-Type</li><li>Stale pages: cache policy and invalidation</li><li>Organization (SCP) blocked a region and OIDC: used an allowed region, built CI without AWS keys</li><li>Organization (SCP) blocked a region and OIDC: used an allowed region, built CI without AWS keys</li></ul></div>
     </div>
     <div class="btns" style="margin-top:20px"><a class="btn" href="https://github.com/YOUR_GITHUB_HERE/YOUR_REPO_HERE" target="_blank" rel="noopener">View code on GitHub</a></div>
   </div>
