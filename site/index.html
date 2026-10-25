@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yogesh Kumar | Entry-Level Cloud Engineer | AWS Certified Solutions Architect – Associate</title>
+<meta name="description" content="AWS Certified Solutions Architect – Associate building cloud infrastructure with Terraform, Git and CI/CD. Based in Sharjah, UAE. Open to entry-level cloud roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a1626; --card:#10243a; --line:#22405c;
+  --ink:#eef3f7; --mute:#a3b6c6;
+  --amber:#f5a93a; --teal:#2dd4bf; --sky:#60a5fa;
+  --grad:linear-gradient(120deg,#2dd4bf 0%,#60a5fa 50%,#f5a93a 100%);
+  --head:"Space Grotesk","Segoe UI",Arial,sans-serif;
+  --body:"Inter","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;background:rgba(10,22,38,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font:700 19px var(--head);text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;font-size:15px}
+nav ul a{text-decoration:none;color:var(--mute)}
+nav ul a:hover{color:var(--ink)}
+.hero{padding:80px 0 56px;background:radial-gradient(900px 400px at 85% -10%,rgba(45,212,191,.22),transparent 60%),radial-gradient(700px 400px at 0% 10%,rgba(96,165,250,.18),transparent 60%)}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--mute);background:rgba(16,36,58,.7)}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+h1{font:700 clamp(40px,7vw,72px)/1.05 var(--head);letter-spacing:-.02em;margin:20px 0 10px}
+h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font:500 clamp(19px,2.6vw,24px) var(--head);color:var(--ink);margin-bottom:16px}
+.lead{color:var(--mute);max-width:62ch;font-size:19px;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font:500 16px var(--body);text-decoration:none;border:1px solid var(--line)}
+.btn.main{background:var(--grad);color:#07131f;border-color:transparent;font-weight:500}
+.btn:hover{border-color:var(--amber)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:44px}
+.fact{background:rgba(16,36,58,.8);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.fact b{display:block;font:500 13px var(--body);color:var(--mute);margin-bottom:4px}
+.fact span{font:500 16px/1.4 var(--head)}
+section{padding:68px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(28px,4vw,38px)/1.15 var(--head);margin-bottom:10px;letter-spacing:-.01em}
+.sub{color:var(--mute);margin-bottom:30px;max-width:64ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;border-top:3px solid var(--teal)}
+.card:nth-child(2){border-top-color:var(--sky)}
+.card:nth-child(3){border-top-color:var(--amber)}
+.card h3{font:700 19px var(--head);margin-bottom:8px}
+.card p,.card li{color:var(--mute);font-size:16px}
+.card ul{padding-left:18px}
+.card li{margin-bottom:6px}
+.sk{margin-bottom:24px}
+.sk h3{font:700 18px var(--head);margin-bottom:4px}
+.sk small{display:block;color:var(--mute);font-size:14px;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:14px;padding:4px 12px;border-radius:6px;background:var(--card);border:1px solid var(--line)}
+.tags .hot{border-color:var(--teal);color:var(--teal)}
+.tags .learn{border-style:dashed;color:var(--mute)}
+.legend{font-size:14px;color:var(--mute);margin-bottom:22px}
+.cert{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+.seal{width:92px;height:92px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#07131f;font:700 20px var(--head);text-align:center;line-height:1.1}
+.cert h3{font:700 22px var(--head);margin-bottom:6px}
+.cert p{color:var(--mute);margin-bottom:12px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;margin-bottom:18px}
+.proj h3{font:700 23px var(--head);margin-bottom:6px}
+.proj p{color:var(--mute);margin-bottom:14px}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:16px 0}
+.flow span{padding:8px 14px;border-radius:8px;background:#0a1626;border:1px solid var(--line);font-size:14px}
+.flow em{color:var(--amber);font-style:normal}
+.flow .wip{border-style:dashed;color:var(--mute)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.cols h4{font:700 15px var(--head);color:var(--teal);margin-bottom:6px}
+.cols ul{padding-left:18px;color:var(--mute);font-size:16px}
+.cols li{margin-bottom:5px}
+.bg{color:var(--mute);font-size:16px;max-width:70ch}
+.bg strong{color:var(--ink);font-weight:500}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+@media(max-width:760px){
+  nav ul{display:none}
+  .cols{grid-template-columns:1fr}
+  .cert{grid-template-columns:1fr}
+  .hero{padding-top:44px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top">Yogesh Kumar</a>
+  <ul><li><a href="#now">Focus</a></li><li><a href="#skills">Skills</a></li><li><a href="#cert">Certification</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div class="pill"><i></i>Open to Cloud Engineerroles · UAE</div>
+  <h1><span>Yogesh Kumar</span></h1>
+  <p class="role">Entry-Level Cloud Engineer · AWS Certified Solutions Architect – Associate</p>
+  <p class="lead">I design secure, low-cost AWS infrastructure and deploy it as code with Terraform and Git. I am moving into cloud after 5 years in operations, and I learn by building: this site itself is a project.</p>
+  <div class="btns">
+    <a class="btn main" href="#projects">See my project</a>
+    <a class="btn" href="#contact">Contact me</a>
+  </div>
+  <div class="facts">
+    <div class="fact"><b>Certified</b><span>AWS Solutions Architect – Associate (SAA-C03)</span></div>
+    <div class="fact"><b>Building with</b><span>Terraform · Git · GitHub · AWS CLI</span></div>
+    <div class="fact"><b>Looking for</b><span>Entry-level Cloud / IT roles</span></div>
+    <div class="fact"><b>Location</b><span>Sharjah, UAE · open to Dubai</span></div>
+  </div>
+</div></header>
+
+<section id="now"><div class="wrap">
+  <h2>What I’m doing right now</h2>
+  <p class="sub">A quick view of where I am, what I’m working on, and where I’m heading.</p>
+  <div class="cards">
+    <div class="card"><h3>Building</h3><p>Hands-on AWS projects, written as Terraform code and stored in Git. Current project: a private S3 + CloudFront website with Origin Access Control and HTTPS.</p></div>
+    <div class="card"><h3>Learning next</h3><ul><li>CI/CD with GitHub Actions and OIDC</li><li>VPC networking and multi-tier design</li><li>Lambda and API Gateway</li></ul></div>
+    <div class="card"><h3>Goal</h3><p>Join a team where I can work on real AWS infrastructure, learn from senior engineers, and grow toward cloud architecture.</p></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <p class="legend">Solid outline = used hands-on in my projects. Dashed = studied for certification, practising next.</p>
+  <div class="sk"><h3>AWS</h3><small>Cloud services</small>
+    <div class="tags"><span class="hot">S3</span><span class="hot">CloudFront</span><span class="hot">IAM</span><span class="hot">Bucket policies</span><span class="learn">EC2</span><span class="learn">VPC</span><span class="learn">RDS</span><span class="learn">Lambda</span><span class="learn">Route 53</span><span class="learn">CloudWatch</span></div></div>
+  <div class="sk"><h3>Infrastructure as Code and DevOps</h3><small>Automation and version control</small>
+    <div class="tags"><span class="hot">Terraform</span><span class="hot">Git and GitHub</span><span class="hot">AWS CLI</span><span class="hot">Linux (WSL)</span><span class="learn">GitHub Actions</span><span class="learn">OIDC</span></div></div>
+  <div class="sk"><h3>Architecture principles</h3><small>From the Well-Architected Framework</small>
+    <div class="tags"><span class="hot">Least privilege</span><span class="hot">Security</span><span class="hot">Cost optimization</span><span class="learn">High availability</span><span class="learn">Fault tolerance</span></div></div>
+  <div class="sk"><h3>Professional</h3><small>From 5 years of operations work</small>
+    <div class="tags"><span class="hot">Process discipline</span><span class="hot">Documentation</span><span class="hot">Troubleshooting</span><span class="hot">Working to deadlines</span></div></div>
+</div></section>
+
+<section id="cert"><div class="wrap">
+  <h2>Certification</h2>
+  <div class="cert">
+    <div class="seal">AWS<br>SAA</div>
+    <div>
+      <h3>AWS Certified Solutions Architect – Associate (SAA-C03)</h3>
+      <p>Covers designing secure, resilient, high-performing and cost-optimized architectures on AWS.</p>
+      <a class="btn" href="YOUR_CREDENTIAL_LINK_HERE" target="_blank" rel="noopener">Verify credential</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <p class="sub">Each project lists what I built, how, and what went wrong along the way.</p>
+  <div class="proj">
+    <h3>Portfolio site deployed with Terraform on AWS</h3>
+    <p>A static site served from a private S3 bucket through CloudFront. The whole setup is code, so one command builds it and one command removes it.</p>
+    <div class="flow"><span>Git push</span><em>→</em><span class="wip">GitHub Actions (in progress)</span><em>→</em><span>Terraform</span><em>→</em><span>S3 (private)</span><em>→</em><span>CloudFront + HTTPS</span></div>
+    <div class="tags"><span class="hot">Terraform</span><span class="hot">S3</span><span class="hot">CloudFront</span><span class="hot">OAC</span><span class="hot">IAM</span><span class="hot">Git</span></div>
+    <div class="cols">
+      <div><h4>What I built</h4><ul><li>Private bucket with Block Public Access on</li><li>CloudFront with Origin Access Control</li><li>Bucket policy limited to one distribution</li></ul></div>
+      <div><h4>Problems I solved</h4><ul><li>AccessDenied: fixed root object and OAC setup</li><li>Page shown as text: set the correct Content-Type</li><li>Stale pages: cache policy and invalidation</li></ul></div>
+    </div>
+    <div class="btns" style="margin-top:20px"><a class="btn" href="https://github.com/YOUR_GITHUB_HERE/YOUR_REPO_HERE" target="_blank" rel="noopener">View code on GitHub</a></div>
+  </div>
+</div></section>
+
+<section id="background"><div class="wrap">
+  <h2>Background</h2>
+  <p class="bg"><strong>Logistics Operations Specialist</strong>, Rls Petrochem Lubricant LLC (Aug 2023 – present), and earlier warehouse operations in the UAE oil trading sector (2021–2023). This work taught me reliable processes, accurate records and calm troubleshooting under deadlines. I now apply the same habits to cloud systems. BA in Geography, PDUSU Sikar (2021).</p>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Let’s talk</h2>
+  <p class="sub">I’m looking for an entry-level cloud role in the UAE. Message me and I’ll reply soon.</p>
+  <div class="btns">
+    <a class="btn main" href="mailto:saini7023@gmail.com">Email me</a>
+    <a class="btn" href="https://www.linkedin.com/in/yogesh-kumar-54037b253/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/https://github.com/saini7023yogesh-crypto/Project-1" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Yogesh Kumar. Built with Terraform, hosted on AWS S3 and CloudFront.</div></footer>
+</body>
+</html>
