@@ -1,10 +1,19 @@
 terraform {
-  required_version = ">= 1.5"
+  required_version = ">= 1.10"
+
+  backend "s3" {
+    bucket       = "yogesh-tfstate-k7q2x9"
+    key          = "portfolio/terraform.tfstate"
+    region       = "eu-north-1"
+    use_lockfile = true
+  }
+
   required_providers {
     aws    = { source = "hashicorp/aws", version = "~> 5.0" }
     random = { source = "hashicorp/random", version = "~> 3.0" }
   }
 }
+    
 
 variable "region" {
   type    = string
@@ -125,3 +134,4 @@ output "site_url" {
 output "bucket_name" {
   value = aws_s3_bucket.site.id
 }
+
